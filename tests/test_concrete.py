@@ -1,3 +1,5 @@
+import math
+
 import pytest
 
 from civil_toolkit.calculators.concrete import (
@@ -36,3 +38,9 @@ def test_slab_rejects_non_positive_dimensions(dimensions):
 def test_allowance_rejects_negative_percentage():
     with pytest.raises(ValueError):
         volume_with_allowance(2, -1)
+
+
+@pytest.mark.parametrize("invalid", [math.nan, math.inf, -math.inf])
+def test_slab_rejects_non_finite_dimensions(invalid):
+    with pytest.raises(ValueError):
+        slab_volume(invalid, 2, 1)
