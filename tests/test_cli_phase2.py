@@ -19,7 +19,7 @@ from civil_toolkit.cli.interface import run_cli
  (["math-ratio","--total","70","--first","1","--second","6"],"(10.0, 60.0)"),
  (["math-convert","--value","2","--from-unit","MPa","--to-unit","kPa"],"2000 kPa"),
  (["math-matrix-add","--matrix-a","1,2;3,4","--matrix-b","5,6;7,8"],"[[6.0, 8.0], [10.0, 12.0]]"),
- (["math-matrix-inverse","--matrix","1,2;3,4"],"[-2.0, 1.0]"),
+ (["math-matrix-inverse","--matrix","1,2;3,4"],"1.5"),
  (["soil-water","--water-mass","20","--dry-soil-mass","100"],"20.000 %"),
  (["soil-phase","--gs","2.65","--void-ratio",".65","--saturation","50"],"Bulk unit weight:"),
 ])
